@@ -38,7 +38,6 @@ self.addEventListener('fetch', (event) => {
          }
          console.log('Fetching from network:', event.request.url);
          return fetch(event.request).catch(() => {
-            console.log('You\'re offline!);
             return new Response('You\'re offline!');
          });
       })
